@@ -1007,6 +1007,7 @@ export function generateProbatorRtpParameters(
 
 	rtpParameters.codecs.push(videoRtpParameters.codecs[0]);
 	rtpParameters.codecs[0].payloadType = RTP_PROBATOR_CODEC_PAYLOAD_TYPE;
+	rtpParameters.codecs[0].rtcpFeedback = [];
 	rtpParameters.headerExtensions = videoRtpParameters.headerExtensions;
 
 	return rtpParameters;
