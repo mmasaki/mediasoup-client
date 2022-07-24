@@ -24,21 +24,9 @@ export declare type ProducerCodecOptions = {
 export declare type ProducerEvents = {
     transportclose: [];
     trackended: [];
-    '@replacetrack': [
-        MediaStreamTrack | null,
-        () => void,
-        (error: Error) => void
-    ];
-    '@setmaxspatiallayer': [
-        number,
-        () => void,
-        (error: Error) => void
-    ];
-    '@setrtpencodingparameters': [
-        RTCRtpEncodingParameters,
-        () => void,
-        (error: Error) => void
-    ];
+    '@replacetrack': [MediaStreamTrack | null, () => void, (error: Error) => void];
+    '@setmaxspatiallayer': [number, () => void, (error: Error) => void];
+    '@setrtpencodingparameters': [RTCRtpEncodingParameters, () => void, (error: Error) => void];
     '@getstats': [(stats: RTCStatsReport) => void, (error: Error) => void];
     '@close': [];
 };

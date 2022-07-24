@@ -106,29 +106,21 @@ export declare type TransportEvents = {
         dtlsParameters: DtlsParameters;
     }, () => void, (error: Error) => void];
     connectionstatechange: [ConnectionState];
-    produce: [
-        {
-            kind: MediaKind;
-            rtpParameters: RtpParameters;
-            appData: Record<string, unknown>;
-        },
-        ({ id }: {
-            id: string;
-        }) => void,
-        (error: Error) => void
-    ];
-    producedata: [
-        {
-            sctpStreamParameters: SctpStreamParameters;
-            label?: string;
-            protocol?: string;
-            appData: Record<string, unknown>;
-        },
-        ({ id }: {
-            id: string;
-        }) => void,
-        (error: Error) => void
-    ];
+    produce: [{
+        kind: MediaKind;
+        rtpParameters: RtpParameters;
+        appData: Record<string, unknown>;
+    }, ({ id }: {
+        id: string;
+    }) => void, (error: Error) => void];
+    producedata: [{
+        sctpStreamParameters: SctpStreamParameters;
+        label?: string;
+        protocol?: string;
+        appData: Record<string, unknown>;
+    }, ({ id }: {
+        id: string;
+    }) => void, (error: Error) => void];
 };
 export declare type TransportObserverEvents = {
     close: [];
